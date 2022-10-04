@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppClimate.Model
 {
-     class tempo
+     public class tempo
     {
         public string Title { get; set; }
         public string Temperature { get; set; }

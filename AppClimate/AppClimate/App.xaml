@@ -5,14 +5,16 @@
     <Application.Resources>
 
         <Style TargetType="Frame">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="CornerRadius" Value="5" />
             <Setter Property="BackgroundColor">
                 <Setter.Value>
                     <Color>
                         <x:Arguments>
-                            <x:Double>.21</x:Double>
-                            <x:Double>.5</x:Double>
-                            <x:Double>.36</x:Double>
-                            <x:Double>.8</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>0</x:Double>
+                            <x:Double>.3</x:Double>
                         </x:Arguments>
                     </Color>
                 </Setter.Value>

@@ -9,13 +9,16 @@ using AppClimate.Model;
 
 namespace AppClimate.Services
 {
-     class dataservice
+     public class dataservice
     {
         public static async Task<tempo> GetPrevisaoDoTempo(string cidade)
         {
             string appId = "471eae4caf8d518a950d031edaee5ae2";
 
-            string queryString = "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric" + "&appid" + appId;
+            string queryString = "https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric" + "&appid=" + appId;
+            
+            Console.WriteLine(queryString);
+            
             dynamic resultado = await getDataFromService(queryString).ConfigureAwait(false);
 
             if (resultado["weather"] != null)

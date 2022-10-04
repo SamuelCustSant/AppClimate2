@@ -4,34 +4,74 @@
              x:Class="AppClimate.MainPage"
              BackgroundImage="fundo.jpg">
 
-    
 
-        <StackLayout>
 
-            <Label Text="" />
-            <Label Text="" />
+    <StackLayout Margin="8">
 
-            <Label Text="AppClima" FontFamily="SemiBold" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" 
+        <Label Text="AppClima" FontFamily="SemiBold" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" 
                    FontSize="70" />
+       
         <Label Text="Procurar Cidade" FontFamily="Regular" HorizontalTextAlignment="Center" TextColor="White" 
                    FontAttributes="None" FontSize="35" />
 
-            <Label Text="" />
 
-        <Entry Placeholder="Digite o nome da cidade:" FontFamily="Light" TextColor="White" VerticalOptions="Center" />
-        <Button Text="Previsão" FontFamily="SemiBold" FontSize="Body" TextColor="White" 
-                    BackgroundColor="#5F68B7" CornerRadius="50" VerticalOptions="Start"/>
+        <Entry x:Name="cidadeEntry" 
+               Placeholder="Digite o nome da cidade:" 
+               PlaceholderColor="White"
+               FontFamily="Light" TextColor="White" 
+               HorizontalOptions="Center" />
+       
+        
+        <Button x:Name="btnPrevisao" 
+                Text="Previsão" 
+                HorizontalOptions="Center"
+                FontFamily="SemiBold" 
+                FontSize="Body" 
+                TextColor="White" 
+                BackgroundColor="#5F68B7" 
+                CornerRadius="50" 
+                VerticalOptions="Start" 
+                Clicked="Button_Clicked"/>
 
-            <Label Text="" />
-            <Label Text="" />
+        <Label Text="" />
 
-            <Frame>
-            <Label Text="-Informações-" FontFamily="SemiBold" HorizontalTextAlignment="Center" TextColor="White" 
+        <Frame>
+            <StackLayout>
+                <Label Text="-Informações-" FontFamily="SemiBold" HorizontalTextAlignment="Center" TextColor="White" 
                        FontAttributes="Bold" FontSize="35" />
-            </Frame>
 
-        </StackLayout>
+                <Label Text="⟥─────────────✤─────────────⟤"  FontFamily="Light" HorizontalTextAlignment="Center" TextColor="White" FontSize="15" />
 
-    
+                
+
+                <Label Text="Local" FontFamily="SemiBold" HorizontalTextAlignment="Center" FontSize="16" TextColor="White" />
+                <Label Text="{Binding Title}" HorizontalTextAlignment="Center" FontFamily="Regular" TextColor="White" />
+
+                <Label Text="Temperatura" FontFamily="SemiBold" HorizontalTextAlignment="Center" FontSize="16" TextColor="White" />
+                <Label x:Name="tempLabel" Text="{Binding Temperature}" HorizontalTextAlignment="Center" FontFamily="Regular" TextColor="White" />
+
+                <Label Text="Veloc. Vento" FontFamily="SemiBold" HorizontalTextAlignment="Center" FontSize="16" TextColor="White" />
+                <Label x:Name="windLabel" Text="{Binding Wind}" HorizontalTextAlignment="Center" FontFamily="Regular" TextColor="White" />
+
+                <Label Text="Humidade" FontFamily="SemiBold" HorizontalTextAlignment="Center" FontSize="16" TextColor="White" />
+                <Label x:Name="humidityLabel" Text="{Binding Humidity}" HorizontalTextAlignment="Center" FontFamily="Regular" TextColor="White" />
+
+                <Label Text="Visibilidade" FontFamily="SemiBold" HorizontalTextAlignment="Center" FontSize="16" TextColor="White" />
+                <Label x:Name="visibilityLabel" Text="{Binding Visibility}" HorizontalTextAlignment="Center" FontFamily="Regular" TextColor="White" />
+
+                <Label Text="Nascimento do Sol" FontFamily="SemiBold" HorizontalTextAlignment="Center" FontSize="16" TextColor="White" />
+                <Label x:Name="sunriseLabel" Text="{Binding Sunrise}" HorizontalTextAlignment="Center" FontFamily="Regular" TextColor="White" />
+
+                <Label Text="Pôr do Sol" FontFamily="SemiBold" HorizontalTextAlignment="Center" FontSize="16" TextColor="White" />
+                <Label x:Name="sunsetLabel" Text="{Binding Sunset}" HorizontalTextAlignment="Center" FontFamily="Regular" TextColor="White" />
+            </StackLayout>
+        </Frame>
+
+
+        
+
+    </StackLayout>
+
+
 
 </ContentPage>
