@@ -67,8 +67,9 @@
             </StackLayout>
         </Frame>
 
+        <Label Text="APP by: Samuel 3°DS 2022" TextColor="White" FontFamily="Light" FontSize="10" HorizontalTextAlignment="Center" />
 
-        
+
 
     </StackLayout>
 

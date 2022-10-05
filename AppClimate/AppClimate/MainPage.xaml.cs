@@ -37,9 +37,9 @@ namespace AppClimate
                     
                 }                  
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                await DisplayAlert("Erro ", ex.Message, "OK");
+                await DisplayAlert("Erro 😔", "Parece que houve um erro. Por favor, tente novamente.", "OK");
                 
             } 
             
